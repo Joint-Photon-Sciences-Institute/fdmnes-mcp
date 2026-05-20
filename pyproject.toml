@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fdmnes-mcp"
+version = "0.1.0"
+description = "MCP server wrapping FDMNES (X-ray spectroscopy ab-initio code) for natural-language driven workflows in Claude Code, Claude Desktop, and other MCP clients."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Joint Photon Sciences Institute" },
+]
+keywords = [
+    "x-ray", "spectroscopy", "xanes", "exafs", "xmcd", "rixs",
+    "fdmnes", "ab-initio", "dft", "mcp", "claude",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "mcp[cli]>=1.0",
+    "matplotlib>=3.6",
+    "numpy>=1.24",
+]
+
+[project.urls]
+Homepage = "https://github.com/Joint-Photon-Sciences-Institute/fdmnes-mcp"
+Repository = "https://github.com/Joint-Photon-Sciences-Institute/fdmnes-mcp"
+Issues = "https://github.com/Joint-Photon-Sciences-Institute/fdmnes-mcp/issues"
+"FDMNES upstream" = "https://fdmnes.neel.cnrs.fr/"
+
+[project.scripts]
+fdmnes-mcp = "fdmnes_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+fdmnes_mcp = ["data/docs/*.md"]
