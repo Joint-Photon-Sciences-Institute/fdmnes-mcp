@@ -12,6 +12,7 @@ license = "BSD-3-Clause"
 license-files = ["LICENSE"]
 authors = [
     { name = "Joint Photon Sciences Institute" },
+    { name = "Nick Marcella", email = "59977941+nmarcella@users.noreply.github.com" },
 ]
 keywords = [
     "x-ray", "spectroscopy", "xanes", "exafs", "xmcd", "rixs",
