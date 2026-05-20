@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fdmnes-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server wrapping FDMNES (X-ray spectroscopy ab-initio code) for natural-language driven workflows in Claude Code, Claude Desktop, and other MCP clients."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -45,7 +45,7 @@ Issues = "https://github.com/Joint-Photon-Sciences-Institute/fdmnes-mcp/issues"
 "FDMNES upstream" = "https://fdmnes.neel.cnrs.fr/"
 
 [project.scripts]
-fdmnes-mcp = "fdmnes_mcp.server:main"
+fdmnes-mcp = "fdmnes_mcp.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
